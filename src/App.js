@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./Profile/Profile";
+import myPhoto from "./Profile/pexels-kokokara-4164086.jpg";
 
 function App() {
+  let users = [
+    { fullName: "Salem", bio: "keep going", profession: "Web Developer" },
+    { fullName: "Khalil", bio: "Move!!!", profession: "Designer" },
+    { fullName: "Ahmed", bio: "Very bad", profession: "photograph" },
+  ];
+  let handleName = (name) => {
+    alert(name);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="card_boxs">
+      {users.map((user) => (
+        <Profile
+          name={user.fullName}
+          bio={user.bio}
+          profession={user.profession}
+          fun={handleName}
         >
-          Learn React
-        </a>
-      </header>
+          <img src={myPhoto} alt="flower" />
+        </Profile>
+      ))}
     </div>
   );
 }

@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  border: 5px #b4b897 dashed;
+  width: 25%;
+  margin-left: 10px;
+}
+img {
+  width: 50%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #747474;
+  width: 100%;
+}
